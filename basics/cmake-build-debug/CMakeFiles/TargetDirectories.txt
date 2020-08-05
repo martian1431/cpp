@@ -1,0 +1,3 @@
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/cmake-build-debug/CMakeFiles/basics.dir
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/cmake-build-debug/CMakeFiles/rebuild_cache.dir
