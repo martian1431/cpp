@@ -20,6 +20,13 @@ extern float f;
 //The static Storage Class
 static int count = 10; /* Global variable */
 void func(void);
+int max(int num1, int num2);
+int sum(int a, int b = 20) {
+    int result;
+    result = a + b;
+
+    return (result);
+}
 
 //The extern Storage Class
 int count1 ;
@@ -88,7 +95,40 @@ int main() {
 //    The extern Storage Class
     count1 = 5;
     write_extern();
+
+//    function
+    cout << max(30, 79) << endl;
+
+//    Call Type
+    // local variable declaration:
+    int aa = 100;
+    int bb = 200;
+    int result;
+
+    // calling a function to add the values.
+    result = sum(aa, bb);
+    cout << "Total value is :" << result << endl;
+
+    // calling a function again as follows.
+    result = sum(aa);
+    cout << "Total value is :" << result << endl;
     return 0;
+
+}
+
+
+
+
+int max(int num1, int num2) {
+    // local variable declaration
+    int result;
+
+    if (num1 > num2)
+        result = num1;
+    else
+        result = num2;
+
+    return result;
 }
 
 // Function definition
