@@ -168,8 +168,20 @@ int main() {
 //    return 0;
 
 //Returning values by reference in
-    reference();
+//    reference();
 
+//Basic Input/Output
+//    char name[50];
+//    cout << "Please enter your name: ";
+//    cin >> name;
+//    cout << "Your name is: " << name << endl;
+
+//    char str[] = "Unable to read....";
+//    cerr << "Error message : " << str << endl;
+
+//    char str[] = "Unable to read....";
+//
+//    clog << "Error message : " << str << endl;
 }
 
 void reference() {
