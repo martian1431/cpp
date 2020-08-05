@@ -180,7 +180,6 @@ int main() {
 //    cerr << "Error message : " << str << endl;
 
 //    char str[] = "Unable to read....";
-//
 //    clog << "Error message : " << str << endl;
 }
 
