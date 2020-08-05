@@ -17,6 +17,14 @@ extern float f;
 #define WIDTH  5
 #define NEWLINE '\n'
 
+//The static Storage Class
+static int count = 10; /* Global variable */
+void func(void);
+
+//The extern Storage Class
+int count1 ;
+extern void write_extern();
+
 int main() {
     cout << "Hello World" << endl;
 
@@ -71,5 +79,22 @@ int main() {
 
     i = j;
     cout << i << " " << j;
+
+//    The static Storage Class
+    while(count--) {
+        func();
+    }
+
+//    The extern Storage Class
+    count1 = 5;
+    write_extern();
     return 0;
+}
+
+// Function definition
+void func( ) {
+    static int i = 5; // local static variable
+    i++;
+    std::cout << "i is " << i ;
+    std::cout << " and count is " << count << std::endl;
 }
