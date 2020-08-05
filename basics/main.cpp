@@ -12,6 +12,11 @@ extern int a, b;
 extern int d;
 extern float f;
 
+//Defining Constants
+#define LENGTH 10
+#define WIDTH  5
+#define NEWLINE '\n'
+
 int main() {
     cout << "Hello World" << endl;
 
@@ -48,5 +53,23 @@ int main() {
 
     f = 70.0/3.0;
     cout << f << endl ;
+
+    //Constants/Literals
+    cout << "Hello\tWorld\n\n";
+
+    int area;
+
+    area = LENGTH * WIDTH;
+    cout << area;
+    cout << NEWLINE;
+
+//     Modifier Types
+    short int i;           // a signed short integer
+    short unsigned int j;  // an unsigned short integer
+
+    j = 50000;
+
+    i = j;
+    cout << i << " " << j;
     return 0;
 }
