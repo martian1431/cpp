@@ -5,7 +5,12 @@ using namespace std;
 //    typedef Declarations
 typedef int feet;
 
-enum color { red, green, blue } c;
+enum color { red=5, green=0, blue=9 } c;
+
+// Variable declaration:
+extern int a, b;
+extern int d;
+extern float f;
 
 int main() {
     cout << "Hello World" << endl;
@@ -23,5 +28,25 @@ int main() {
     cout << "typedef declaration: " << test << endl;
 
 //    Enumerated Types
+//    c = blue;
+    cout << "Enumerated Type: " << red << endl;
+    cout << "Enumerated Type: " << green << endl;
+    cout << "Enumerated Type: " <<  blue << endl;
+
+//
+    // Variable definition:
+    int a, b;
+    int d;
+    float f;
+
+    // actual initialization
+    a = 10;
+    b = 20;
+    d = a + b;
+
+    cout << d << endl ;
+
+    f = 70.0/3.0;
+    cout << f << endl ;
     return 0;
 }
