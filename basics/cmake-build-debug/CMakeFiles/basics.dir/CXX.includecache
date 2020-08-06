@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/Box.h
+
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/Line.h
+
 C:/Users/bbdnet2204/Documents/projects/cpp/basics/main.cpp
 iostream
 -
@@ -13,4 +17,8 @@ time.h
 -
 cstring
 -
+Box.h
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/Box.h
+Line.h
+C:/Users/bbdnet2204/Documents/projects/cpp/basics/Line.h
 

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <time.h>
 #include <cstring>
+#include "Box.h"
+#include "Line.h"
 
 using namespace std;
 
@@ -57,12 +59,17 @@ void structure();
 
 void printBook(struct Books *book);
 
+void classes();
+
 struct Books {
     char  title[50];
     char  author[50];
     char  subject[100];
     int   book_id;
 };
+
+
+
 
 int main() {
 //    cout << "Hello World" << endl;
@@ -200,7 +207,63 @@ int main() {
 //    typedef long int some;
 //    some var = 666;
 //    cout << var << endl;
+
+
+//Classes
+    classes();
     return 0;
+}
+
+void classes() {
+    Box Box1;        // Declare Box1 of type Box
+    Box Box2;        // Declare Box2 of type Box
+    double volume = 0.0;     // Store the volume of a box here
+
+    // box 1 specification
+//    Box1.height = 5.0;
+//    Box1.length = 6.0;
+//    Box1.breadth = 7.0;
+
+    // box 2 specification
+//    Box2.height = 10.0;
+//    Box2.length = 12.0;
+//    Box2.breadth = 13.0;
+
+    // volume of box 1
+//    volume = Box1.height * Box1.length * Box1.breadth;
+//    cout << "Volume of Box1 : " << volume <<endl;
+
+    // volume of box 2
+//    volume = Box2.height * Box2.length * Box2.breadth;
+//    cout << "Volume of Box2 : " << volume <<endl;
+
+    // box 1 specification
+    Box1.setLength(6.0);
+    Box1.setBreadth(7.0);
+    Box1.setHeight(5.0);
+
+    // box 2 specification
+    Box2.setLength(12.0);
+    Box2.setBreadth(13.0);
+    Box2.setHeight(10.0);
+
+    // volume of box 1
+    volume = Box1.getVolume();
+    cout << "Volume of Box1 : " << volume <<endl;
+
+    // volume of box 2
+    volume = Box2.getVolume();
+    cout << "Volume of Box2 : " << volume <<endl;
+
+    Line line(10.0);
+
+    // get initially set length.
+    cout << "Length of line : " << line.getLength() <<endl;
+
+    // set line length
+    line.setLength(6.0);
+    cout << "Length of line : " << line.getLength() <<endl;
+
 }
 
 void structure() {
