@@ -1,5 +1,6 @@
 #include <iostream>
 #include <time.h>
+#include <cstring>
 
 using namespace std;
 
@@ -51,6 +52,17 @@ int *getRandom();
 void swap_(int &a, int &i);
 
 void reference();
+
+void structure();
+
+void printBook(struct Books *book);
+
+struct Books {
+    char  title[50];
+    char  author[50];
+    char  subject[100];
+    int   book_id;
+};
 
 int main() {
 //    cout << "Hello World" << endl;
@@ -165,7 +177,7 @@ int main() {
 //
 //    cout << "After swap, value of a :" << a << endl;
 //    cout << "After swap, value of b :" << b << endl;
-//    return 0;
+//
 
 //Returning values by reference in
 //    reference();
@@ -181,7 +193,54 @@ int main() {
 
 //    char str[] = "Unable to read....";
 //    clog << "Error message : " << str << endl;
+
+
+//    Defining a Structure
+//    structure();
+//    typedef long int some;
+//    some var = 666;
+//    cout << var << endl;
+    return 0;
 }
+
+void structure() {
+    struct Books Book1;        // Declare Book1 of type Book
+    struct Books Book2;        // Declare Book2 of type Book
+
+    // book 1 specification
+    strcpy( Book1.title, "Learn C++ Programming");
+    strcpy( Book1.author, "Chand Miyan");
+    strcpy( Book1.subject, "C++ Programming");
+    Book1.book_id = 6495407;
+
+    // book 2 specification
+    strcpy( Book2.title, "Telecom Billing");
+    strcpy( Book2.author, "Yakit Singha");
+    strcpy( Book2.subject, "Telecom");
+    Book2.book_id = 6495700;
+
+    cout << "====Before====" << endl;
+    printBook(&Book1);
+    cout << endl;
+    printBook(&Book2);
+    cout << endl;
+    cout << "====After====" << endl;
+    printBook(&Book1);
+    cout << endl;
+    printBook(&Book2);
+}
+
+void printBook(struct Books *book) {
+    cout << "Book title : " << book->title <<endl;
+    cout << "Book author : " << book->author <<endl;
+    cout << "Book subject : " << book->subject <<endl;
+    cout << "Book id : " << book->book_id <<endl;
+    strcpy( book->title, "Changed");
+    strcpy( book->author, "Changed");
+    strcpy( book->subject, "Changed");
+    book->book_id = 0;
+}
+
 
 void reference() {
     cout << "Value before change" << endl;
