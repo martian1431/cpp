@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -std=c++0x -Wall -pedantic-errors -g
 
 SRCS =  main.cpp Box.cpp Line.cpp
-#SRCS =  $(shell find . -name ".cpp")
+#SRCS =  $(shell find . -name "*.cpp")
 OBJS = ${SRCS:.cpp=.o}
 HEADERS = Box.h Line.h
 
